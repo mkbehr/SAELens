@@ -27,7 +27,7 @@ total_training_tokens = total_training_steps * batch_size
 print(f"Total Training Tokens: {total_training_tokens}")
 
 hook_name_template = "blocks.{layer}.hook_mlp_out"
-layers = list(range(3))
+layers = list(range(12))
 
 model_name = "gpt2-small"
 dataset_path = "apollo-research/SkyLion007-openwebtext-tokenizer-gpt2"
@@ -94,7 +94,7 @@ cfg = LanguageModelSAERunnerConfig(
     adam_beta1=0.9,
     adam_beta2=0.999,
     # Buffer details won't matter in we cache / shuffle our activations ahead of time.
-    n_batches_in_buffer=32,
+    n_batches_in_buffer=64,
     store_batch_size_prompts=16,
     normalize_activations="expected_average_only_in",
     # Feature Store
