@@ -94,7 +94,7 @@ cfg = LanguageModelSAERunnerConfig(
     adam_beta1=0.9,
     adam_beta2=0.999,
     # Buffer details won't matter in we cache / shuffle our activations ahead of time.
-    n_batches_in_buffer=64,
+    n_batches_in_buffer=32,
     store_batch_size_prompts=16,
     normalize_activations="expected_average_only_in",
     # Feature Store
