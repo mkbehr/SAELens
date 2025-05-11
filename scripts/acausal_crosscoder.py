@@ -27,7 +27,7 @@ total_training_tokens = total_training_steps * batch_size
 print(f"Total Training Tokens: {total_training_tokens}")
 
 hook_name_template = "blocks.{layer}.hook_mlp_out"
-layers = list(range(2))
+layers = list(range(3))
 
 model_name = "gpt2-small"
 dataset_path = "apollo-research/SkyLion007-openwebtext-tokenizer-gpt2"
@@ -61,7 +61,7 @@ cfg = LanguageModelSAERunnerConfig(
     d_in=d_in,
     dataset_path=dataset_path,
     streaming=True,
-    context_size=512,
+    context_size=1024,
     is_dataset_tokenized=True,
     prepend_bos=True,
     expansion_factor=expansion_factor,
