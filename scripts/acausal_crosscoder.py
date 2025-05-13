@@ -48,7 +48,7 @@ if not log_to_wandb:
 d_in = 768
 expansion_factor = 32
 d_sae = d_in * expansion_factor
-learning_rate = 2e-5
+learning_rate = 5e-5
 l1_coefficient = 1
 hook_name = hook_name_template.format(layer=f"{min(layers)}_through_{max(layers)}")
 hook_names = [hook_name_template.format(layer=layer) for layer in layers]
