@@ -46,7 +46,7 @@ if not log_to_wandb:
     print("NOT LOGGING TO WANDB")
 
 d_in = 768
-expansion_factor = 32
+expansion_factor = 128
 d_sae = d_in * expansion_factor
 learning_rate = 5e-5
 l1_coefficient = 1
