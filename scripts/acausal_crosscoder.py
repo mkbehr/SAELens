@@ -20,7 +20,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # total_training_steps = 200_000
 # total_training_steps = 60_000
-total_training_steps = 10_000
+total_training_steps = 50_000
 batch_size = 4092
 # batch_size = 256
 total_training_tokens = total_training_steps * batch_size
