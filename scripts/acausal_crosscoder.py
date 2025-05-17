@@ -18,11 +18,8 @@ else:
 print("Using device:", device)
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-# total_training_steps = 200_000
-# total_training_steps = 60_000
-total_training_steps = 50_000
+total_training_steps = 20_000
 batch_size = 4092
-# batch_size = 256
 total_training_tokens = total_training_steps * batch_size
 print(f"Total Training Tokens: {total_training_tokens}")
 
@@ -49,7 +46,7 @@ d_in = 768
 expansion_factor = 128
 d_sae = d_in * expansion_factor
 learning_rate = 5e-5
-l1_coefficient = 1
+l1_coefficient = 0.2
 hook_name = hook_name_template.format(layer=f"{min(layers)}_through_{max(layers)}")
 hook_names = [hook_name_template.format(layer=layer) for layer in layers]
 
